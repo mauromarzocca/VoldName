@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoldName • Anagrammatore Magico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🪄 VoldName</h1>
+    <p class="subtitle">Trasforma il tuo nome in un’anagramma magico, come Voldemort!</p>
+
+    <div class="input-group">
+      <input type="text" id="fullname" placeholder="Es. Mauro Marzocca" autocomplete="off" />
+      <select id="language">
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">🇬🇧 Inglese</option>
+      </select>
+    </div>
+
+    <button id="generateBtn" onclick="generateAnagram()">Genera Anagramma</button>
+    <div id="result"></div>
+    <button id="retryBtn" onclick="retry()" style="display: none;">Riprova</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
