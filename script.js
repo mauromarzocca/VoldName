@@ -18,7 +18,7 @@ function getCountKey(str) {
     if (c >= 'a' && c <= 'z') count[c] = (count[c] || 0) + 1;
   }
   return Object.entries(count)
-    .sort(([a]) => a)
+    .sort(([a], [b]) => a.localeCompare(b))
     .map(([k, v]) => k + v)
     .join('');
 }
@@ -49,7 +49,7 @@ function subtractKeys(inputKey, subKey) {
     if (res[k] === 0) delete res[k];
   }
   return Object.entries(res)
-    .sort(([a]) => a)
+    .sort(([a], [b]) => a.localeCompare(b))
     .map(([k, v]) => k + v)
     .join('');
 }
