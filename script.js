@@ -93,6 +93,7 @@ function findAnagrams(fullName, lang) {
         for (const surname of surnameList) {
           // Verifica finale (ridondante ma sicura)
           const combined = cleanStr(name + surname);
+          if (combined === clean) continue;
           if (combined.split('').sort().join('') === clean.split('').sort().join('')) {
             results.push({ name, surname });
           }
